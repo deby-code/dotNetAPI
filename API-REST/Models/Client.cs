@@ -8,6 +8,7 @@
         public int? Age { get; set; }
         public decimal? Weight { get; set; }
         public decimal? Size { get; set; }
+        public decimal? IMC { get; set; }
         public bool IsOverWeight { get; set; }
     }
 }

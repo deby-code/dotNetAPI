@@ -79,8 +79,10 @@ namespace API_REST.Controllers
         public async Task<ActionResult<Client>> PostClient(Client client)
         {
             _context.Client.Add(client);
+            client.IsOverWeight = client.Weight / (client.Size * client.Size) > 25;
+            client.IMC = client.Weight / (client.Size * client.Size);
             await _context.SaveChangesAsync();
-
+            
             return CreatedAtAction("GetClient", new { id = client.Id }, client);
         }
 
