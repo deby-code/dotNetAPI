@@ -14,5 +14,9 @@ namespace API_REST.Models
         public DbSet<TodoItem> TodoItems { get; set; } = null!;
 
         public DbSet<API_REST.Models.Client> Client { get; set; }
+
+        public DbSet<API_REST.Models.Worker> Worker { get; set; }
+
+        public DbSet<API_REST.Models.Department> Department { get; set; }
     }
 }
