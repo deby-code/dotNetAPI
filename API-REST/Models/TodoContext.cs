@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
+using API_REST.Models;
 
 namespace API_REST.Models
 {
@@ -11,5 +12,7 @@ namespace API_REST.Models
         }
 
         public DbSet<TodoItem> TodoItems { get; set; } = null!;
+
+        public DbSet<API_REST.Models.Client> Client { get; set; }
     }
 }
